@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - Pisang Premium</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"
+                style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
+                <img src="images/logo.png" alt="Logo" width="45" height="45" class="rounded-circle shadow-sm">
+                <span class="fw-bold" style="letter-spacing: -0.5px;">Pisang Premium</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto align-items-left">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link active px-3" href="produk.html">Produk</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="kontak.html"
+                            class="btn btn-warning rounded-pill px-4 fw-bold text-dark-blue shadow-sm hover-effect">Kontak
+                            Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-product">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                Katalog Pisang Segar</h1>
+            <p class="lead opacity-75">Dari pisang meja hingga pisang olahan, semua tersedia dengan jaminan kualitas
+                terbaik.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="mb-5">
+            <h3 class="fw-bold mb-4 border-start border-5 border-warning ps-3"
+                style="color: #2c3e50; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Daftar Harga Resmi
+            </h3>
+            <div class="table-responsive shadow-sm rounded-3">
+                <table class="table table-custom mb-0">
+                    <thead>
+                        <tr>
+                            <th>Jenis Produk</th>
+                            <th>Harga Eceran</th>
+                            <th>Harga Grosir (>10kg)</th>
+                            <th>Status Stok</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">Pisang Raja</td>
+                            <td>Rp 30.000</td>
+                            <td>Rp 28.000 /kg</td>
+                            <td><span class="badge bg-success rounded-pill">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Pisang Susu</td>
+                            <td>Rp 31.000</td>
+                            <td>Rp 30.000 /kg</td>
+                            <td><span class="badge bg-success rounded-pill">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Pisang Ambon</td>
+                            <td>Rp 30.000</td>
+                            <td>Rp 28.000 /kg</td>
+                            <td><span class="badge bg-warning text-dark rounded-pill">Terbatas</span></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Pisang Ampyang</td>
+                            <td>Rp 25.000</td>
+                            <td>Rp 22.000 /kg</td>
+                            <td><span class="badge bg-success rounded-pill">Tersedia</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="fw-bold mb-4 border-start border-5 border-warning ps-3"
+                style="color: #2c3e50; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Pilihan Terbaik
+            </h3>
+            <div class="row g-4" id="katalogProduk">
+            </div>
+        </section>
+
+        <section class="mb-5 bg-light p-5 rounded-4">
+            <h3 class="fw-bold text-center mb-5"
+                style="color: #2c3e50; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Layanan
+                Cerdas</h3>
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="service-panel">
+                        <h5 class="fw-bold mb-3"><i class="fas fa-user-md text-warning me-2"></i>Konsultasi Produk</h5>
+                        <p class="text-muted small mb-3">Bingung pilih pisang? Masukkan usia Anda untuk mendapatkan
+                            rekomendasi terbaik.</p>
+
+                        <div class="input-group mb-3">
+                            <input type="number" id="inputUsia" class="form-control" placeholder="Masukkan usia (th)">
+                        </div>
+                        <button id="btnCekUsia" class="btn btn-warning w-100 fw-bold text-white">Cek</button>
+                        <div id="hasilRekomendasi" class="result-box"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="service-panel">
+                        <h5 class="fw-bold mb-3"><i class="fas fa-calculator text-warning me-2"></i>Simulasi Belanja
+                        </h5>
+                        <p class="text-muted small mb-3">Hitung perkiraan total belanja Anda dengan mudah sebelum
+                            memesan.</p>
+
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <input type="number" id="inputHarga" class="form-control" placeholder="Harga (Rp)">
+                            </div>
+                            <div class="col-6">
+                                <input type="number" id="inputJumlah" class="form-control" placeholder="Jumlah">
+                            </div>
+                        </div>
+                        <button id="btnHitungBelanja" class="btn btn-warning w-100 fw-bold text-white">Hitung
+                            Total</button>
+                        <div id="hasilKalkulator" class="result-box"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="fw-bold mb-4 border-start border-5 border-warning ps-3"
+                style="color: #2c3e50; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Testimoni
+                Pelanggan</h3>
+            <div class="row" id="wadahTestimoni">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-5">
+
+                <!-- Brand -->
+                <div class="col-lg-4">
+                    <h5 class="footer-title text-warning">Pisang Premium</h5>
+                    <p class="footer-desc small">
+                        Solusi buah segar harian Anda. Mendukung petani lokal dengan menghadirkan
+                        pisang berkualitas tinggi yang segar dan alami untuk kebutuhan keluarga Anda.
+                    </p>
+
+                    <div class="footer-social d-flex gap-3 mt-3">
+                        <a href="https://www.instagram.com/bimaa.ng?" aria-label="Instagram" class="social-link fs-5"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BuU8t9ELD/" aria-label="Facebook"
+                            class="social-link fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@bimaadinug?" aria-label="Tiktok" class="social-link fs-5"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/6287745514313" aria-label="WhatsApp" class="social-link fs-5"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="col-lg-2 col-6">
+                    <h5 class="footer-title">Menu</h5>
+                    <ul class="footer-list small list-unstyled">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kategori Produk -->
+                <div class="col-lg-2 col-6">
+                    <h5 class="footer-title">Kategori Produk</h5>
+                    <ul class="footer-list small list-unstyled">
+                        <li><a href="produk.html">Pisang Raja</a></li>
+                        <li><a href="produk.html">Pisang Susu</a></li>
+                        <li><a href="produk.html">Pisang Ambon</a></li>
+                        <li><a href="produk.html">Pisang Ampyang</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div class="col-lg-3 col-12">
+                    <h5 class="footer-title">Kontak & Alamat</h5>
+                    <ul class="footer-list small list-unstyled">
+                        <li>Jl. Dwikora Yosorejo, Pekalongan</li>
+                        <li>+62 877 4551 4313</li>
+                        <li>bimaadi809@gmail.com</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <div class="text-center small pt-2">
+                © 2025 Pisang Premium UMKM. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/produk.js"></script>
+
+</body>
+
+</html>

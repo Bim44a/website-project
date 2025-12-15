@@ -1,0 +1,531 @@
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #fcfcfc;
+     color: #555;
+     padding-top: 76px;
+ }
+
+ /* Navbar Transparan ke Solid saat Scroll */
+ .navbar-custom {
+     background-color: #fff9e6;
+     transition: all 0.4s ease;
+     padding: 15px 0;
+ }
+
+ .navbar-custom.scrolled {
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+     padding: 10px 0;
+     background-color: #fcfcfc;
+ }
+
+ /* --- TAMBAHAN: Styling Menu Navigasi (Hover Effect) --- */
+ .navbar-nav .nav-link {
+     color: #555;
+     /* Warna teks menu standar (abu gelap) */
+     font-weight: 600;
+     /* Sedikit tebal */
+     transition: color 0.3s ease;
+     /* Transisi halus */
+ }
+
+ /* Efek saat kursor diarahkan (Hover) */
+ .navbar-nav .nav-link:hover {
+     color: #FFC107;
+     /* Berubah jadi Kuning Pisang */
+ }
+
+ /* Warna untuk menu yang sedang Aktif */
+ .navbar-nav .nav-link.active {
+     color: #FFC107 !important;
+ }
+
+ /* Footer */
+ footer {
+     background: #212529;
+     color: #bbb;
+     margin-top: 80px;
+ }
+
+ footer h5 {
+     color: white;
+     margin-bottom: 20px;
+     /* Font family ditambahkan inline di HTML bawah */
+ }
+
+ footer a {
+     color: #bbb;
+     text-decoration: none;
+     transition: 0.3s;
+ }
+
+ footer a:hover {
+     /* GANTI VARIABEL DENGAN WARNA LANGSUNG */
+     color: #FFC107;
+     padding-left: 5px;
+ }
+
+
+
+
+ /* ----------------------------------------------------- */
+
+
+ /* ===============================================
+                 BAGIAN INDEX
+ ==================================================*/
+
+ /* Hero Section */
+ .hero-section {
+     background-color: #fff9e6;
+     padding: 60px 0;
+     border-radius: 0 0 50px 50px;
+     margin-bottom: 50px;
+ }
+
+ /* Card Produk */
+ .product-card {
+     border: none;
+     border-radius: 15px;
+     background: white;
+     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+     overflow: hidden;
+ }
+
+ .product-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .card-img-wrapper {
+     height: 220px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #fff;
+     padding: 20px;
+ }
+
+ .card-img-wrapper img {
+     max-height: 100%;
+     max-width: 100%;
+     object-fit: contain;
+     transition: transform 0.5s ease;
+ }
+
+ .product-card:hover .card-img-wrapper img {
+     transform: scale(1.1);
+ }
+
+ /* Fitur / Trust Section */
+ .feature-icon-box {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto 20px;
+     background: #f4f4f4;
+
+     /* GANTI VARIABEL DENGAN WARNA LANGSUNG */
+     color: #FFC107;
+     transition: all 0.3s;
+ }
+
+ /* ----------------------------------------------------- */
+
+
+
+ /* ===============================================
+                 BAGIAN TENTANG KAMI
+ ==================================================*/
+
+ /* --- Hero Section Cinematic --- */
+ .hero-about {
+     background-color: #fff9e6;
+     color:  #2c3e50;
+     padding: 120px 0;
+     margin-bottom: 0;
+ }
+
+ /* --- Stats Section --- */
+ .stats-section {
+     background-color: #FFC107;
+     color: #2c3e50;
+     padding: 50px 0;
+     margin-top: -50px;  /* Overlap effect */
+     border-radius: 10px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     position: relative;
+     z-index: 10;
+ }
+
+ .stat-item h3 {
+     font-size: 2.5rem;
+     font-weight: 700;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-bottom: 0;
+ }
+
+ /* --- Timeline Section --- */
+ .timeline {
+     position: relative;
+     padding: 20px 0;
+ }
+
+ .timeline-item {
+     padding: 20px;
+     border-left: 3px solid #FFC107;
+     position: relative;
+     margin-left: 20px;
+     margin-bottom: 30px;
+ }
+
+ .timeline-item::before {
+     content: '';
+     position: absolute;
+     width: 15px;
+     height: 15px;
+     background-color: #FFC107;
+     border-radius: 50%;
+     left: -9px;
+     top: 24px;
+ }
+
+ /* --- Team Member Card (Professional) --- */
+ .team-member {
+     background: #fff;
+     border-radius: 15px;
+     overflow: hidden;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+     transition: all 0.3s ease;
+     text-align: center;
+     padding-bottom: 20px;
+ }
+
+ .team-member:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .team-photo-wrapper {
+     position: relative;
+     overflow: hidden;
+     border-bottom: 5px solid #FFC107;
+ }
+
+ .team-photo-wrapper img {
+     width: 100%;
+     height: 350px;
+     object-fit: cover;
+     transition: transform 0.5s;
+ }
+
+ .team-member:hover img {
+     transform: scale(1.1);
+ }
+
+ .social-links a {
+     display: inline-block;
+     width: 35px;
+     height: 35px;
+     background: #f4f4f4;
+     color: #555;
+     border-radius: 50%;
+     text-align: center;
+     line-height: 35px;
+     margin: 0 5px;
+     transition: 0.3s;
+ }
+
+ .social-links a:hover {
+     background: #FFC107;
+     color: white;
+ }
+
+ /* ----------------------------------------------------- */
+
+
+
+ /* ===============================================
+                 BAGIAN PODUK
+ ==================================================*/
+
+ /* --- Hero Section--- */
+ .hero-product {
+     color: #2c3e50;
+     padding: 80px 0;
+     text-align: center;
+     margin-bottom: 50px;
+     background-color: #fff9e6;
+ }
+
+ /* --- Table Styling --- */
+ .table-custom th {
+     background-color: #FFC107;
+     color: #2c3e50;
+     border: none;
+     padding: 15px;
+ }
+
+ .table-custom td {
+     padding: 15px;
+     vertical-align: middle;
+ }
+
+ .table-custom tr:hover {
+     background-color: #fff9e6;
+ }
+
+ /* --- Product Card --- */
+ .product-card {
+     border: none;
+     border-radius: 15px;
+     background: white;
+     transition: all 0.3s;
+     overflow: hidden;
+     height: 100%;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+ }
+
+ .product-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .card-img-wrapper {
+     height: 200px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #fff;
+     padding: 20px;
+ }
+
+ .card-img-wrapper img {
+     max-height: 100%;
+     object-fit: contain;
+     transition: transform 0.5s;
+ }
+
+ .product-card:hover img {
+     transform: scale(1.1);
+ }
+
+ /* --- (REKOMENDASI & HITUNG TOTAL BELANJA) --- */
+ .service-panel {
+     background: white;
+     padding: 30px;
+     border-radius: 15px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+     border-top: 5px solid #FFC107;
+     height: 100%;
+ }
+
+ .form-control:focus {
+     border-color: #FFC107;
+     box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+ }
+
+ .result-box {
+     margin-top: 15px;
+     padding: 15px;
+     border-radius: 8px;
+     background: #f8f9fa;
+     font-weight: bold;
+     display: none;
+     /* Hidden by default */
+ }
+
+ .result-box.success {
+     background: #d4edda;
+     color: #155724;
+     display: block;
+ }
+
+ .result-box.error {
+     background: #f8d7da;
+     color: #721c24;
+     display: block;
+ }
+
+ /* --- Testimoni Grid --- */
+ .testi-card {
+     background: #fff9e6;
+     padding: 20px;
+     border-radius: 15px;
+     border: 1px solid #eee;
+ }
+
+ .star-rating {
+     color: #FFC107;
+ }
+
+ /* ----------------------------------------------------- */
+
+
+
+
+ /* ===============================================
+                 BAGIAN GALERI
+ ==================================================*/
+
+ /* --- Hero Section --- */
+ .hero-gallery {
+     padding: 80px 0;
+     text-align: center;
+     margin-bottom: 20px;
+     background-color: #fff9e6;
+     color:  #2c3e50;
+ }
+
+ /* --- Gallery Card Styles --- */
+ .card-gallery {
+     cursor: pointer;
+     transition: all 0.3s ease;
+     overflow: hidden;
+     background-color: white;
+ }
+
+ .card-gallery img {
+     height: 250px;
+     object-fit: cover;
+     transition: transform 0.5s ease;
+ }
+
+ .card-gallery .card-body {
+     transition: background-color 0.3s ease;
+ }
+
+ /* --- State: Hover Aktif (Dikontrol JS) --- */
+ .card-gallery.hover-aktif {
+     transform: translateY(-8px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+ }
+
+ .card-gallery.hover-aktif img {
+     transform: scale(1.05);
+ }
+
+ .card-gallery.hover-aktif .card-body {
+     background-color: #fffae6;
+     /* Sedikit kuning saat di-hover */
+ }
+
+ /* ----------------------------------------------------- */
+
+
+
+
+ /* ===============================================
+                 BAGIAN KONTAK
+ ==================================================*/
+
+ /* --- Hero Section --- */
+ .hero-contact {
+     background-color: #fff9e6;
+     color: #2c3e50;
+     padding: 80px 0;
+     text-align: center;
+     margin-bottom: 50px;
+ }
+
+ /* --- Form Card Styling --- */
+ .form-card {
+     background: white;
+     padding: 30px;
+     border-radius: 15px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+     border-top: 5px solid #FFC107;
+     height: 100%;
+ }
+
+ .form-title {
+     color: #2c3e50;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: bold;
+     margin-bottom: 20px;
+     border-bottom: 2px solid #f0f0f0;
+     padding-bottom: 15px;
+ }
+
+ /* Input Styles */
+ .form-label {
+     font-weight: 600;
+     font-size: 0.9rem;
+     color: #444;
+ }
+
+ .form-control,
+ .form-select {
+     border-radius: 8px;
+     padding: 10px 15px;
+     border: 1px solid #ddd;
+     margin-bottom: 5px;
+     /* Space for error msg */
+ }
+
+ .form-control:focus,
+ .form-select:focus {
+     border-color: #FFC107;
+     box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+ }
+
+ /* Error Message Styling */
+ .error-msg {
+     color: #dc3545;
+     font-size: 0.8rem;
+     margin-bottom: 15px;
+     display: none;
+     /* Hidden by default */
+ }
+
+ .is-invalid {
+     border-color: #dc3545 !important;
+ }
+
+ /* Button Styling */
+ .btn-submit {
+     background-color: #FFC107;
+     color: #2c3e50;
+     font-weight: bold;
+     border: none;
+     padding: 12px;
+     border-radius: 50px;
+     width: 100%;
+     transition: all 0.3s;
+ }
+
+ .btn-submit:hover {
+     background-color: #e0a800;
+     transform: translateY(-2px);
+ }
+
+ .btn-reset {
+     color: #777;
+     text-decoration: underline;
+     font-size: 0.9rem;
+     background: none;
+     border: none;
+     margin-top: 10px;
+ }
+
+ /* Feedback Box */
+ .feedback-box {
+     margin-top: 15px;
+     padding: 15px;
+     border-radius: 8px;
+     display: none;
+     text-align: center;
+     font-weight: bold;
+ }
+
+ .feedback-success {
+     background: #d4edda;
+     color: #155724;
+ }
+
+ .feedback-warning {
+     background: #fff3cd;
+     color: #856404;
+ }
